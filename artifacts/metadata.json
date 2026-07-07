@@ -1,0 +1,87 @@
+{
+  "version": "ieee-v3-20260706T194349Z",
+  "dataset": "IEEE-CIS Fraud Detection",
+  "model_generation": "V3",
+  "feature_count": 462,
+  "best_iteration": 3995,
+  "validation_pr_auc": 0.6535585031644238,
+  "validation_roc_auc": 0.9370789870588883,
+  "global_test_metrics": {
+    "roc_auc": 0.9115959824991156,
+    "pr_auc": 0.5629463980402174,
+    "test_rows": 88581,
+    "test_fraud_rows": 3083
+  },
+  "product_thresholds": {
+    "monitor": {
+      "source": "precision_50",
+      "threshold": 0.04820418357849121,
+      "validation_precision": 0.5009732360097323,
+      "validation_recall": 0.6768573307034845,
+      "validation_f1": 0.5757829977623746
+    },
+    "review": {
+      "source": "precision_70",
+      "threshold": 0.138283371925354,
+      "validation_precision": 0.7005414410662224,
+      "validation_recall": 0.5529257067718606,
+      "validation_f1": 0.6180415212194224
+    },
+    "automatic_case": {
+      "source": "precision_95",
+      "threshold": 0.9652385115623474,
+      "validation_precision": 0.9502407704654896,
+      "validation_recall": 0.1946088099934254,
+      "validation_f1": 0.32305593451540676
+    }
+  },
+  "test_operating_metrics": {
+    "monitor": {
+      "threshold": 0.04820418357849121,
+      "precision": 0.4118169702354509,
+      "recall": 0.6013623094388583,
+      "f1": 0.48885959129861567,
+      "true_negatives": 82850,
+      "false_positives": 2648,
+      "false_negatives": 1229,
+      "true_positives": 1854,
+      "predicted_fraud_rows": 4502,
+      "false_positive_rate": 0.030971484713092703
+    },
+    "review": {
+      "threshold": 0.138283371925354,
+      "precision": 0.5979020979020979,
+      "recall": 0.49918910152448914,
+      "f1": 0.5441046491073007,
+      "true_negatives": 84463,
+      "false_positives": 1035,
+      "false_negatives": 1544,
+      "true_positives": 1539,
+      "predicted_fraud_rows": 2574,
+      "false_positive_rate": 0.012105546328569089
+    },
+    "automatic_case": {
+      "threshold": 0.9652385115623474,
+      "precision": 0.9067278287461774,
+      "recall": 0.19234511839117743,
+      "f1": 0.3173668718223174,
+      "true_negatives": 85437,
+      "false_positives": 61,
+      "false_negatives": 2490,
+      "true_positives": 593,
+      "predicted_fraud_rows": 654,
+      "false_positive_rate": 0.0007134669816837821
+    }
+  },
+  "decision_threshold": 0.9652385115623474,
+  "anomaly_calibration": {
+    "p01": -0.19015222071569865,
+    "p99": -0.059692874482014345
+  },
+  "data_integrity": {
+    "synthetic_rows_used": false,
+    "fraud_labels_fabricated": false,
+    "future_labels_used": false,
+    "chronological_split": true
+  }
+}

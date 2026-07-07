@@ -1,0 +1,23 @@
+services:
+  api:
+    build: {context: ., dockerfile: Dockerfile.api}
+    # Local development only: exposes FastAPI (and /docs) directly on the host.
+    # Per DEPLOYMENT.md, do NOT publish this port in non-local production.
+    ports: ["8000:8000"]
+    volumes:
+      - ./artifacts:/app/artifacts:ro
+      - ./data:/app/data
+    restart: unless-stopped
+  gateway:
+    build: ./server
+    environment:
+      ML_API_URL: http://api:8000
+      RATE_LIMIT_PER_MINUTE: 120
+    ports: ["3000:3000"]
+    depends_on: [api]
+    restart: unless-stopped
+  web:
+    build: ./web
+    ports: ["5173:80"]
+    depends_on: [gateway]
+    restart: unless-stopped

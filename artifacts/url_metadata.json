@@ -1,0 +1,70 @@
+{
+  "version": "phiusiil-url-v2-20260707T051144Z",
+  "dataset": "UCI PhiUSIIL Phishing URL Dataset",
+  "model": "ExtraTreesClassifier",
+  "feature_count": 49,
+  "synthetic_data_used": false,
+  "fabricated_labels": false,
+  "held_out_metrics": {
+    "roc_auc": 0.9981770092146718,
+    "pr_auc": 0.9981859035523651
+  },
+  "product_thresholds": {
+    "suspicious": {
+      "source": "precision_90",
+      "threshold": 0.011768877442717474,
+      "precision": 0.9063263643768666,
+      "recall": 0.9962196577795464,
+      "f1": 0.9491493294151686
+    },
+    "high_risk": {
+      "source": "precision_95",
+      "threshold": 0.03646692369525732,
+      "precision": 0.9525123715264561,
+      "recall": 0.9957222443294866,
+      "f1": 0.97363813229522
+    },
+    "block": {
+      "source": "precision_99",
+      "threshold": 0.21129763619152797,
+      "precision": 0.9900926338732848,
+      "recall": 0.9941802626343016,
+      "f1": 0.9921322379682771
+    }
+  },
+  "test_operating_metrics": {
+    "suspicious": {
+      "threshold": 0.011768877442717474,
+      "precision": 0.9063263643768666,
+      "recall": 0.9962196577795464,
+      "f1": 0.9491493294156675,
+      "true_negatives": 24900,
+      "false_positives": 2070,
+      "false_negatives": 76,
+      "true_positives": 20028,
+      "false_positive_rate": 0.07675194660734148
+    },
+    "high_risk": {
+      "threshold": 0.03646692369525732,
+      "precision": 0.9525123715264561,
+      "recall": 0.9957222443294866,
+      "f1": 0.9736381322957198,
+      "true_negatives": 25972,
+      "false_positives": 998,
+      "false_negatives": 86,
+      "true_positives": 20018,
+      "false_positive_rate": 0.03700407860585836
+    },
+    "block": {
+      "threshold": 0.21129763619152797,
+      "precision": 0.9900926338732848,
+      "recall": 0.9941802626343016,
+      "f1": 0.9921322379687771,
+      "true_negatives": 26770,
+      "false_positives": 200,
+      "false_negatives": 117,
+      "true_positives": 19987,
+      "false_positive_rate": 0.007415647015202077
+    }
+  }
+}
