@@ -25,9 +25,22 @@ jobs:
         with:
           node-version: '20'
 
+      # - name: Install frontend dependencies
+      #   working-directory: web
+      #   run: npm install --no-audit --no-fund
+
+      # - name: Build frontend
+      #   working-directory: web
+      #   run: npm run build
       - name: Install frontend dependencies
         working-directory: web
-        run: npm install --no-audit --no-fund
+        run: npm install --include=dev --no-audit --no-fund
+
+      - name: Verify frontend toolchain
+        working-directory: web
+        run: |
+          npm exec vite -- --version
+          npm exec tsc -- --version
 
       - name: Build frontend
         working-directory: web
